@@ -1,0 +1,19 @@
+digraph ERD {
+    graph [rankdir=LR];
+    node [shape=record];
+
+    users [label="{users | id (PK) | name | email | password | phone | address | position | photo | role_id (FK)}"];
+    roles [label="{roles | id (PK) | name}"];
+    leaves [label="{leaves | id (PK) | user_id (FK) | leave_type_id (FK) | start_date | end_date | reason | status}"];
+    leave_types [label="{leave_types | id (PK) | name}"];
+    payroll [label="{payroll | id (PK) | user_id (FK) | month | year | salary | bonuses | deductions | net_pay}"];
+    bonuses [label="{bonuses | id (PK) | user_id (FK) | amount | reason | date}"];
+    deductions [label="{deductions | id (PK) | user_id (FK) | amount | reason | date}"];
+
+    users -> roles [label="role_id"];
+    leaves -> users [label="user_id"];
+    leaves -> leave_types [label="leave_type_id"];
+    payroll -> users [label="user_id"];
+    bonuses -> users [label="user_id"];
+    deductions -> users [label="user_id"];
+}
