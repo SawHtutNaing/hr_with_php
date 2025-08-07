@@ -13,10 +13,10 @@
                 <a href="/user/leave_history.php" class="block p-2 rounded hover:bg-gray-700">Leave History</a>
             </li>
             <li class="mb-2">
-                <a href="/user/payroll.php" class="block p-2 rounded hover:bg-gray-700">View Payroll</a>
+                <a href="/user/payroll" class="block p-2 rounded hover:bg-gray-700">View Payroll</a>
             </li>
             <li class="mb-2">
-                <a href="/user/profile.php" class="block p-2 rounded hover:bg-gray-700">My Profile</a>
+                <a href="/user/profile" class="block p-2 rounded hover:bg-gray-700">My Profile</a>
             </li>
         </ul>
     </nav>
